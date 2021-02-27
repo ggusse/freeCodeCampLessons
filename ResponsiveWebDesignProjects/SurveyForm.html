@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<style>
+    body {
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+        font-size: 1em;
+        background-color: rgba(46, 46, 180, 0.507);
+    }
+    body::before {
+        content:'';
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-image: linear-gradient( 115deg, rgba(58, 158, 133, 0.8), rgba(136, 136, 206, 0.7) ), 
+        url(https://ak.picdn.net/shutterstock/videos/1023825202/thumb/1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    h1 {
+        font-size: 2.4em
+    }
+    form {
+        padding: 1.5em 1.5em;
+        background: rgba(2, 63, 55, 0.623);
+        margin: auto auto;
+        border-radius: 0.5em;
+        color: grey;
+        max-width: 600px;
+
+    }
+    #page-head {
+        text-align: center;
+        color: white;
+        margin: 3em auto;
+    }
+    .form-group {
+        text-align: left;
+        padding: .5em;
+        display: block;
+        margin: 0 auto 1em auto;
+        padding: 1.25em;
+        font-size: 1.3em;
+        color: white;
+    }
+    .form-control {
+        display: block;
+        width: 100%;
+        border-radius: .3em;
+        font-size: 0.9em;
+        margin-top: 0.75em;
+    }
+    label {
+        display: flex;
+        align-items: center;
+    }
+    input {
+        margin: 0;
+    }
+    #name {
+        min-height: 35px;
+    }
+    #email {
+        min-height: 35px;
+    }
+    #number {
+        min-height: 35px;
+    }
+    #dropdown {
+        min-height: 35px;
+    }
+    #relationship-label {
+        margin-bottom: 1.3em;
+    }
+    #pages-label {
+        margin-bottom: 1.3em;
+    }
+    #message {
+        min-height: 200px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #submit {
+        color: white;
+        background-color: rgb(13, 165, 89);
+        width: 36%;
+        padding: .6em;
+        font-size: 20px;
+        margin: 2em 32% 2em;
+        border-radius: 0.3em;
+        font-size: 1.5em
+    }
+</style>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name ="suggestions box" content="A form to submit suggestions for my website">
+        <title>Leave a Message</title>
+        <link rel="Website Icon" href="">
+    </head>
+    <body>
+        <main>
+        <div id="page-head">
+            <h1 id="title">Leave a Message</h1>
+            <p id="description">A place to leave me a message</p>
+        </div>
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input id="name" class="form-control" type="text" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email Address</label>
+                <input id="email" class="form-control" type="email" name="email" placeholder="Enter your email address" required>
+            </div>
+            <div class=form-group>
+                <label id="number-label" for="number">Age (Optional)</label>
+                <input id="number" class="form-control" type="number" name="age" min="1" max="120" placeholder="Age">
+            </div>
+            <div class="form-group">
+                <label id="dropdown-label" for="dropdown">What brought you to my website?</label>
+                <select id="dropdown"  class="form-control" name="" required>
+                    <option disabled selected value>Please select an option</option>
+                    <option value="resume">Resume</option>
+                    <option value="business card">Business Card</option>
+                    <option value="social media">Social Media</option>
+                    <option value="suggested">By Suggestion</option>
+                    <option value="other">Other</option>                    
+                </select>
+            </div>
+            <div class="form-group">
+                <label id="relationship-label">Which describes your relationship to me?</label>
+                <label  class="form-control">
+                    <input name="relationship" value="recruiter" type="radio">
+                    Recruiter
+                </label>
+                <label class="form-control">
+                    <input name="relationship" value="collegue" type="radio">
+                    Collegue
+                </label  class="form-control">
+                <label class="form-control">
+                    <input name="relationship" value="friend" type="radio">
+                    Friend
+                </label>
+                <label class="form-control">
+                    <input name="relationship" value="none" type="radio">
+                    None
+                </label>
+            </div>
+                <div class="form-group">
+                    <label id="pages-label">Which pages have you visited on my site?</label>
+                    <label class="form-control">
+                        <input value="tribute" type="checkbox">
+                        Von Neumann Tribute Page
+                    </label>
+                    <label class="form-control">
+                        <input value="messager" type="checkbox">
+                        Messager Page
+                    </label>
+                    <label class="form-control">
+                        <input value="none" type="checkbox">
+                        None
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label id="message-label">Message Box:</label>
+                    <textarea id="message" class="form-control" name="message" placeholder="Please leave your message here"></textarea>
+                </div>
+                <div class="submit-button">
+                    <button id="submit" type="submit">Submit</button>
+                </div>
+            </main>
+        </form>
+    </body>
+    <!--Griffin Gusse-->
+</html>
